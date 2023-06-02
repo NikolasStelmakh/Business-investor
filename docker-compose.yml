@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  client:
+    container_name: bi-client
+    build: client/
+    command: npm run dev
+    ports:
+      - 3010:3010
+
+  api:
+    container_name: bi-api
+    build: api/
+    command: npm run start:dev
+    depends_on:
+      - postgres
+    ports:
+      - 3000:3000
+    environment:
+      - DATABASE_URL=postgresql://johny_cage:ab1f6hh942sm@bi-postgres:5432/business_investor_local?schema=public
+
+  postgres:
+    container_name: bi-postgres
+    image: postgres:14.1-alpine
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: ab1f6hh942sm
+      POSTGRES_USER: johny_cage
+      POSTGRES_DB: business_investor_local

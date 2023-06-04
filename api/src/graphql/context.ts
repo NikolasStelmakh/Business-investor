@@ -1,13 +1,9 @@
-import { ApiRequest } from '../types';
+import { GraphQlApiRequest } from '../types';
 
 export interface Context {
-  token?: string;
+   token?: string;
 }
 
-export const createContext = async ({
-  req,
-}: {
-  req: ApiRequest;
-}): Promise<Context> => ({
-  token: req.authToken,
+export const createContext = async ({ req }: { req: GraphQlApiRequest }): Promise<Context> => ({
+   token: req.authToken,
 });

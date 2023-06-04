@@ -29,11 +29,12 @@
       "error",
       {
         "trailingComma": "all",
-        "printWidth": 80,
+        "printWidth": 100,
         "singleQuote": true,
-        "tabWidth": 4
+        "tabWidth": 3
       }
     ],
+    "indent": ["error", 3],
     "no-unused-vars": "warn",
     "quotes": ["error", "single"],
     "@typescript-eslint/no-var-requires": "warn",

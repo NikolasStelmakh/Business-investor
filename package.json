@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/NikolasStelmakh/business-investor",
+  "homepage": "https://github.com/NikolasStelmakh/Business-investor",
   "workspaces": ["client", "api"],
   "engines": {
     "node": ">=18.13.0"
